@@ -26,7 +26,7 @@
     <!-- All JavaScript at the bottom, except this Modernizr build.
          Modernizr enables HTML5 elements & feature detects for optimal performance.
          Create your own custom Modernizr build: www.modernizr.com/download/ -->
-    <script src="js/lib/modernizr.min.js"></script>
+    <script src="lib/modernizr.min.js"></script>
 </head>
 <body>
     <!-- Prompt IE 6 users to install Chrome Frame. Remove this if you support IE 6.
@@ -46,7 +46,25 @@
 
     <!-- scripts concatenated and minified via build script -->
     <!--script src="js/plugins.js"></script-->
-  <script data-main="js/main.js" src="js/lib/require/require.js"></script>
+  <script src="lib/seajs/dist/sea.js" data-main="./main"></script>
+  <!--script>
+    seajs.config({
+      alias: {
+        'jquery': 'lib/jquery/dist/jquery.js',
+        'underscore': 'lib/underscore/underscore.js',
+        'backbone': 'lib/backbone/backbone.js',
+        'd3': 'lib/d3/d3.v2.js'
+      },
+      base: 'file://localhost/Users/i7xh/workspace/7lab/works/7vision/',
+      debug: true,
+      charset: 'utf-8'
+    });
+
+    seajs.use(['hello'], function(require){
+      var $ = require('jquery')
+      $('div#zh-chart').html('i am i7xh')
+    })
+  </script-->
     <!-- end scripts -->
 
     <!-- Asynchronous Google Analytics snippet. Change UA-XXXXX-X to be your site's ID.
