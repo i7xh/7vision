@@ -17,7 +17,7 @@ define(function(require) {
   var backbone = require('backbone');
   var vision = require('./src/core')
   var axis = require('./src/axis')
-  var d3 = require('d3');
+  //var d3 = require('d3');
   //d3.select("body").style("background-color", "gray")
 })
 
